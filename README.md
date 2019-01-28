@@ -4,12 +4,24 @@
 
 - Register :
 
-      - /api/auth/register
+       /api/auth/register
 
-* Get whole user object (after adding the token) :
+* Get whole user object (after getting & providing the token) :
 
-      - /api/auth/me
+       /api/auth/me
 
 - Get the users :
 
-      - /api/user
+       /api/user
+
+- Get user by ID :
+
+       /api/user/ :id
+
+- update user by ID :
+    
+   /api/user/ :id
+
+- delete user by ID :
+
+      /api/user/ :id
