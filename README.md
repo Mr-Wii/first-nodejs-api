@@ -19,8 +19,8 @@
        /api/user/ :id
 
 - update user by ID :
-    
-   /api/user/ :id
+
+      /api/user/ :id
 
 - delete user by ID :
 
