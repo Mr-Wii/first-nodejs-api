@@ -27,14 +27,33 @@ router.get('/', (req, res) => {
   })
 })
 
-//get a single boi
-
 router.get('/:id', (req, res) => {
   User.findById(req.params.id, (err, user) => {
     if (err) return res.status(500).send('Problem finding the boi.')
     if (!user) return res.status(404).send('No boi found.')
     res.status(200).send(user)
   })
+})
+
+router.delete('/:id', (req, res) => {
+  User.findByIdAndRemove(req.params.id, (err, user) => {
+    if (err)
+      return res.status(500).send('There was a problem deleting the boi.')
+    res.status(200).send('Boi ' + user.name + ' was deleted.')
+  })
+})
+
+router.put('/:id', (req, res) => {
+  User.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, user) => {
+      if (err)
+        return res.status(500).send('There was a problem updating the boi.')
+      res.status(200).send(user)
+    }
+  )
 })
 
 module.exports = router
