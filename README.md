@@ -8,15 +8,15 @@
 
 * Get whole user object (after getting & providing the token) :
 
-       /api/auth/me
+      /api/auth/me
 
 - Get the users :
 
-       /api/user
+      /api/user
 
 - Get user by ID :
 
-       /api/user/ :id
+      /api/user/ :id
 
 - update user by ID :
 
